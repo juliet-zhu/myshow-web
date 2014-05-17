@@ -1,0 +1,59 @@
+// Sidebar 
+.sidebar.clearfix 
+  .sidebar-dropdown
+    a(href="#") 导航
+  // Sidebar navigation
+  ul#nav(style="display:block")
+    // Main menu with font awesome icon
+    li.has_sub 
+      a(href="#")
+        i.fa.fa-wrench
+        |应用管理
+        span.pull-right
+          i.fa.fa-caret-right
+      ul
+        li
+          a(href="app.html") 
+            i.fa.fa-caret-right 
+            |应用管理
+          a(href="#") 
+            i.fa.fa-caret-right
+            |平台管理
+          a(href="#") 
+            i.fa.fa-caret-right
+            |语言管理
+          a(href="#") 
+            i.fa.fa-caret-right
+            |发行商管理
+          a(href="#") 
+            i.fa.fa-caret-right
+            |服务器管理
+    li.has_sub 
+      a(href="#")
+        i.fa.fa-wrench
+        |渠道管理
+        span.pull-right
+          i.fa.fa-caret-right
+      ul
+        li
+          a(href="package-channel.html") 分包渠道管理
+          a(href="payment-channel.html") 支付渠道管理  
+    li.has_sub 
+      a(href="#")
+        i.fa.fa-wrench
+        |用户管理  
+        span.pull-right
+          i.fa.fa-caret-right
+      ul
+        li
+          a(href="#") 子帐号管理
+    li.has_sub 
+      a(href="#")
+        i.fa.fa-wrench
+        |报表管理    
+        span.pull-right
+          i.fa.fa-caret-right
+      ul
+        li
+          a(href="report.html") 自定义报表
+// Sidebar ends

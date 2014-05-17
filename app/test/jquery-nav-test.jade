@@ -1,0 +1,19 @@
+extends ../templates/test.jade
+block vars
+	- page = "test"
+	- BASEURL = "../"
+block content
+	.content
+		// Subnav
+		.subnav
+			.container
+				.row
+					.col-md-12
+						h4 导航测试页面
+		include ../templates/sidebar-admin
+		.mainbar
+block js
+	script(src="#{BASEURL}scripts/components/jquery.nav.js")
+	// jQuery navigation
+	script.
+		$('#nav').nav();

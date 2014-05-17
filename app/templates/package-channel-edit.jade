@@ -1,0 +1,28 @@
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-12
+        .widget
+          .widget-head.clearfix
+            .pull-left
+              |修改渠道
+          form(role="form").form-horizontal#packageChannelEditForm
+            .widget-content
+              .padd.form-fix-width
+                .form-group(style="height:auto;margin-bottom:15px")
+                  label.control-label.col-md-2 渠道 ID
+                  .col-md-10
+                    p.pt2 DE9D089298319944D99325A13FCA656C
+                .form-group
+                  label(for="channelName").control-label.col-md-2 名称
+                  .col-md-10
+                    input(type="text",placeholder="2-12个汉字",name="channelName",autocomplete="off").form-control#channelName
+                .form-group
+                  label(for="channelScale").control-label.col-md-2 分成比例
+                  .col-md-10
+                    input(type="text",placeholder="0-100",name="channelScale",autocomplete="off").form-control#channelScale
+              .widget-foot.clearfix
+                button(type="submit").btn.btn-success.pull-right 确认修改
+
+// Matter end

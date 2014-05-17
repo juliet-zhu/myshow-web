@@ -1,0 +1,31 @@
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-12
+        .widget
+          .widget-head.clearfix
+            .pull-left
+              |添加渠道
+          form(role="form").form-horizontal#paymentChannelNewForm
+            .widget-content
+              .padd.form-fix-width
+                .form-group
+                  label(for="channelID").control-label.col-md-2 渠道 ID
+                  .col-md-10
+                    input(type="text",placeholder="2-16个英文、数字或下划线",name="channelID",required,autocomplete="off")#channelID.form-control
+                .form-group
+                  label(for="name").control-label.col-md-2 渠道名称
+                  .col-md-10
+                    input(type="text",placeholder="2-12个汉字",name="channelName",autocomplete="off").form-control#name
+                .form-group
+                  label(for="channelType").control-label.col-md-2 渠道类型
+                  .col-md-10
+                    select.chosen-select-width(data-placeholder="渠道类型").select-with-search
+                      option(value="") 
+                      option(selected) 运营商托收
+                      option 自渠道计费
+              .widget-foot.clearfix
+                button.btn.btn-success.pull-right 确认添加
+
+// Matter end

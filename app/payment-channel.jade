@@ -1,0 +1,19 @@
+extends admin
+block vars
+  - page = "paymentChannel"
+  - BASEURL = "../"
+block html
+  // Delete modal
+  .modal.fade#deleteChannel
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          h4.modal-title 消息
+        .modal-body
+          p 确认删除此渠道吗？
+        .modal-footer
+          button.btn.btn-primary(type='button') 确认
+          button.btn.btn-default(type='button', data-dismiss='modal') 取消
+block mainbar
+  include templates/payment-channel

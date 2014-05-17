@@ -1,0 +1,54 @@
+doctype html
+block vars
+  - var page = ""
+  - BASEURL = "../"
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    // Stylesheets
+    link(href="#{BASEURL}styles/libs/bootstrap.min.css",rel="stylesheet")
+    // Font-awesome icon
+    link(href="#{BASEURL}styles/components/font-awesome.min.css",rel="stylesheet")
+    // jQuery UI
+    link(href="#{BASEURL}styles/components/jquery-ui.css",rel="stylesheet")
+    // Calendar
+    link(href="#{BASEURL}styles/components/fullcalendar.css",rel="stylesheet")
+    // prettyPhoto
+    link(href="#{BASEURL}styles/components/prettyPhoto.css",rel="stylesheet")
+    // Star rating
+    link(href="#{BASEURL}styles/components/rateit.css",rel="stylesheet")
+    // Date Picker
+    link(href="#{BASEURL}styles/components/bootstrap-datetimepicker.min.css",rel="stylesheet")
+    // CLEditor
+    link(href="#{BASEURL}styles/components/jquery.cleditor.css",rel="stylesheet")
+    // Uniform
+    //- link(href="#{BASEURL}styles/uniform.default.css",rel="stylesheet")
+    // Bootstap toggle
+    link(href="#{BASEURL}styles/components/bootstrap-switch.css",rel="stylesheet")
+    // Main stylesheet
+    link(href="#{BASEURL}styles/components/base.css",rel="stylesheet")
+    link(href="#{BASEURL}styles/main.css",rel="stylesheet")
+    // Widgets stylesheet
+    link(href="#{BASEURL}styles/components/widgets.css",rel="stylesheet")
+    // HTML5 support for IE
+    <!--[if lt IE 9]><script src="js/html5shim.js"></script><![endif]-->
+    block head
+  body(id=page)
+    .wrapper
+      block empty
+        include header
+        // Main content starts
+        block content
+        // Main content ends
+        include footer
+    // JS
+    script(src="#{BASEURL}scripts/libs/jquery.min.js")
+    // jQuery
+    script(src="#{BASEURL}scripts/libs/respond.min.js")
+    // RespondJs
+    script(src="#{BASEURL}scripts/components/bootstrap.js")
+    // Bootstrap
+
+    block js

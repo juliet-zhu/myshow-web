@@ -1,0 +1,425 @@
+@require "inc/mixins"
+@require "inc/vars"
+
+/* Margin and Padding */
+
+//margin
+for i in (0..100)
+  .m{i}
+    margin i*1px!important
+  .ml{i}
+    margin-left i*1px!important
+  .mr{i}
+    margin-right i*1px!important
+  .mb{i}
+    margin-bottom i*1px!important
+  .mt{i}
+    margin-top i*1px!important
+//padding
+for i in (0..100)
+  .p{i}
+    padding i*1px!important
+  .pl{i}
+    padding-left i*1px!important
+  .pr{i}
+    padding-right i*1px!important
+  .pb{i}
+    padding-bottom i*1px!important
+  .pt{i}
+    padding-top i*1px!important
+
+/* Text align */
+
+.tal 
+  text-align left!important
+.tac 
+  text-align center!important
+
+/* Font size */
+
+.font12
+  font-size 12px
+
+/* Font color */
+
+.color-036
+  color #036
+    
+/* Body */
+
+body 
+  font-family "Microsoft YaHei"
+.container
+  width 100%
+
+/* Opened */
+.opened 
+  display block
+
+/* Utility class */
+.success
+  color $success-color
+  border-color $success-border-color
+.warning
+  color $warning-color
+  border-color $warning-border-color
+.error
+  color $error-color
+  font-size 12px
+  border-color $error-border-color
+.highlight-success
+  border 1px solid $success-border-color!important
+.highlight-error
+  border 1px solid $error-border-color!important
+.highlight-warning
+  border 1px solid $warning-border-color!important
+
+/* Header */
+
+.header
+  padding 10px 0
+  background url("../images/header-bg.png") left top repeat
+  
+  .top-tool-bar
+    float right
+    list-style none
+    margin-top 28px
+    color #fff
+    li 
+      float left
+      a 
+        display inline-block
+        padding 0 10px
+        color #fff
+        font-weight bolder
+        font-size 16px
+        &:hover
+          text-decoration underline
+      &.account
+        font-size 12px
+        span
+          color #da8b59
+
+/* Subnav*/
+
+.subnav 
+  padding 5px 0
+  border-bottom 1px solid #ccc
+  background url(../images/cream.png) left top repeat
+  h4
+    color #003366
+
+/* Report page subnav */
+#report 
+  .subnav
+    position relative
+    z-index 9999
+.isStuck
+    left 0px
+    width 100%
+
+/* Button like link */
+
+.btn-custome
+  display inline-block
+  margin-bottom 0
+  font-weight bold
+  text-align center
+  vertical-align middle
+  cursor pointer
+  background-image none
+  border 1px solid transparent
+  white-space nowrap
+  padding 6px 12px
+  font-size 14px
+  user-select(none)
+  &:focus
+    tab-focus()
+  &:hover,&:focus
+    color #fff
+    text-decoration none
+
+.btn-custome-success
+  padding 10px 20px
+  font-size 18px
+  button-variant(#fff,#59a759,#397539)
+  i
+    margin-right 5px
+  
+.btn-custome-primary
+  padding 10px 20px
+  font-size 18px
+  button-variant(#fff,#67acb1,#4c90a5)
+  i
+    margin-right 5px
+.btn-custome-lightblue
+  border-color #ccc
+  background-image-gradient-2()
+  &:focus
+    background-image-gradient-2()
+.btn-group
+  button.btn-custome-lightblue.btn-calendar
+    &:focus
+      background #c1d5e4
+
+/* Table custome*/
+
+.table-custome
+  thead
+    background #35819a
+    color #fff
+    th
+      text-align center
+  tbody
+    stripe(#e5eff3,#f5f5f5)
+    tr
+      td
+        vertical-align middle
+        text-align center
+
+/* Pagination custome */
+
+.pagination-custome
+  list-style-type none
+  font-size 16px
+  li 
+    float left
+    i 
+      padding 3px 8px
+      font-size 18px
+      color #666
+
+
+/* Dropdown custome*/
+
+.dropdown-custome
+  display inline-block
+  width 100%
+  margin-left 6px
+  padding 7px 28px
+  color #666
+  text-shadow 0 1px 1px rgba(255,255,255,0.75)
+  text-align center
+  background-color #f5f5f5
+  background-image-gradient()
+  background-repeat repeat-x
+  filter(#fff,#e6e6e6)
+  border 1px solid #ccc
+  border-radius 3px
+  i
+    margin-top 5px
+.dropdown
+  .dropdown-menu
+    padding 5px 
+    width 100%
+
+/* Report select style*/
+
+.select-report-head
+  text-align center
+  a 
+    span 
+      color #036
+
+/* New app */
+
+.new-app
+  .widget-head
+    padding-top 15px
+
+/* Step bar */
+
+.step-bar
+  list-style-type none
+  margin 0 auto
+  padding 0
+  width 90%
+  li
+    box-sizing border-box
+    float left
+    i.icon 
+      font-size 38px
+      margin-right 15px
+      background #dadada
+      border-radius 100%
+      border 2px solid #ababab
+      color #fff
+      line-height 38px
+      text-shadow 0 1px 1px #666
+      padding 10px 14px
+    i.fa-edit
+      padding 10px 8px 8px 14px
+    .fa-chevron-right
+      position absolute
+      margin-top 15px
+      font-size 32px
+      color #959595
+    .con 
+      text-align center
+      h3
+        color #003366
+        font-weight bold
+      span 
+        font-size 12px
+    &.step1
+      width 33%
+    &.step2
+      width 38%
+    &.step3
+      float right
+      width 28%
+    &.active
+      i.icon
+        background #78aeb9
+        border 2px solid #467989
+      i.fa-chevron-right
+        color #78aeb9
+    &.success
+      i.fa-check
+        padding 10px 12px
+        background #86b261
+        border 2px solid #2e8101
+      i.fa-chevron-right
+        color #2e8101
+        
+/* Widget content */
+
+.widget-content
+  .container
+    padding 40px 20px 60px
+
+/* Widget content */
+
+.widget-content-right
+  max-width 400px
+  margin 0 auto
+.widget-content-left
+  max-width 600px
+  margin 0 auto
+  padding-right 50px
+  border-right 1px dashed #ccc
+  .btn-custome-success
+    width 100%
+
+/* App id */
+
+.app-id
+  border 1px solid #ccc
+  padding 6px 12px
+  background #f5f5f5
+
+/* Note */
+
+.note 
+  font-size 12px
+
+/* Download links */
+
+.download-links
+  max-width 386px
+  a 
+    display inline-block
+    width 180px
+    font-size 12px
+  
+/* Tips */
+
+.tips 
+  border 1px solid #ccc
+  h5 
+    margin 0
+    padding 5px 10px
+    font-weight bold 
+    background #ebebeb
+    border-bottom 1px solid #ccc
+  .con 
+    font-size 12px
+    padding 20px
+    background #fff
+    i 
+      margin-right 10px
+
+/* Form */
+
+.form-fix-width
+  width 70%
+  margin 0 auto
+
+/* Package-channel-new page */
+
+#packageChannelNew 
+  .form-group
+    height 60px
+    margin-bottom 0
+
+/* Package-channel-edit page */
+
+#packageChannelEdit 
+  .form-group
+    height 60px
+    margin-bottom 0
+
+/* Payment-channel-new page */
+
+#paymentChannelNew 
+  .form-group
+    height 60px
+    margin-bottom 0
+
+/* Package-channel-edit page */
+
+#paymentChannelEdit 
+  .form-group
+    height 60px
+    margin-bottom 0
+
+/* Report toolbar */
+
+.toolbar-btn
+  padding 10px 14px
+
+/* Head */
+
+.head
+  float left
+  width 215px
+  .chosen-container-single
+    .chosen-single 
+      background-image-gradient-2()
+
+/* Icon large */
+
+.icon-large
+  font-size 16px
+
+/* Tooltipbox */
+
+.tooltipbox 
+  cursor pointer
+
+/* Filter */
+
+.filter-box 
+  position relative
+  .form-group
+    margin-bottom 0
+  .filter-hr
+    float left
+    width 100%
+    margin 5px auto 5px
+    border-top 2px solid #5bc0de
+  .dropdown-menu
+    top 44px
+/* Form group box */
+.form-group-box
+  margin-left 32%
+  margin-right 15%
+
+/* Footer*/
+
+.footer
+  padding 10px 0
+  background url("../images/header-bg.png") left top repeat
+  text-align center
+  font-size 12px
+  color #fff

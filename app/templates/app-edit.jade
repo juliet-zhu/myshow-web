@@ -1,0 +1,32 @@
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-12
+        .widget
+          .widget-head.clearfix
+            .pull-left
+              |修改应用
+          .widget-content
+            .padd
+              form(role="form").form-horizontal
+                .form-group
+                  label.control-label.col-md-2 App ID
+                  .col-md-10
+                    p.pt2 DE9D089298319944D99325A13FCA656C
+                .form-group
+                  label(for="name").control-label.col-md-2 变更名称
+                  .col-md-10
+                    input(type="text",placeholder="变更名称").form-control#name
+                .form-group
+                  label.control-label.col-md-2 游戏类型
+                  .col-md-10
+                    select.chosen-select-width(data-placeholder="游戏类型").select-with-search
+                      option(value="") 
+                      option 卡片
+                      option 卡片
+            .widget-foot.clearfix
+              button.btn.btn-danger.pull-left 删除游戏
+              button.btn.btn-success.pull-right 修改
+
+// Matter end

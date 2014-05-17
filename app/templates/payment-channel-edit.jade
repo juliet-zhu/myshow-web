@@ -1,0 +1,31 @@
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-12
+        .widget
+          .widget-head.clearfix
+            .pull-left
+              |修改渠道
+          form(role="form").form-horizontal#paymentChannelEditForm
+            .widget-content
+              .padd.form-fix-width
+                .form-group(style="height:auto;margin-bottom:15px")
+                  label.control-label.col-md-2 渠道 ID
+                  .col-md-10
+                    p.pt2 DE9D089298319944D99325A13FCA656C
+                .form-group
+                  label(for="name").control-label.col-md-2 名称
+                  .col-md-10
+                    input(type="text",placeholder="2-12个汉字",name="channelName",autocomplete="off").form-control#name
+                .form-group
+                  label(for="channelType").control-label.col-md-2 渠道类型
+                  .col-md-10
+                    select.chosen-select-width(data-placeholder="渠道类型").select-with-search
+                      option(value="") 
+                      option(selected) 运营商托收
+                      option 自渠道计费
+              .widget-foot.clearfix
+                button.btn.btn-success.pull-right 确认修改
+
+// Matter end

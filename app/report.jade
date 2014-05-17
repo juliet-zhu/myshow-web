@@ -1,0 +1,150 @@
+extends templates/base
+block vars
+  - page = "report"
+  - BASEURL = "../"
+block content
+  .content
+    // Subnav
+    .subnav
+      .container
+        .row 
+          .col-md-12
+            .head.clearfix
+              h4.pull-left.mt6.mr6 报表中心
+                |&nbsp;
+                i.fa.fa-chevron-right
+              select#select-report-head
+                option(value="") 
+                option(selected) 二战风云
+                option 契约 
+            .filter-box.ml15.pull-left
+              button.btn.btn-success.toolbar-btn#filterBtn
+                i.fa.fa-search.mr5
+                |筛选
+              .dropdown-menu(role="menu",style="min-width:800px;")
+                form(role="form")
+                  .container.pb10.pt10
+                    .dropdown-menu-left.form-horizontal.clearfix(style="width:33%").pull-left
+                        .form-group
+                          label.col-md-2.control-label.pt9  平台
+                          .col-md-7.pl0
+                            input(type="text",placeholder="搜索平台").form-control
+                        .form-group
+                          .form-group-box.clearfix
+                            .checkbox.pull-left
+                              label
+                                input(type="checkbox",title="选中/取消选中").checkAll
+                                |全选
+                            .checkbox.pull-left.ml15
+                              label
+                                input(type="checkbox",title="反选").checkInverse
+                                |反选
+                            hr.filter-hr
+                        .form-group
+                          .form-group-box.checkboxs#filterPlatforms
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |平台1
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |平台2
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |平台3
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |平台4
+
+                    .dropdown-menu-mid.form-horizontal.clearfix(style="width:33%").pull-left
+                      .form-group
+                          label.col-md-2.control-label.pt9  渠道
+                          .col-md-7.pl0
+                            input(type="text",placeholder="搜索渠道").form-control
+                        .form-group
+                          .form-group-box.clearfix
+                            .checkbox.pull-left
+                              label
+                                input(type="checkbox",title="选中/取消选中").checkAll
+                                |全选
+                            .checkbox.pull-left.ml15
+                              label
+                                input(type="checkbox",title="反选").checkInverse
+                                |反选
+                            hr.filter-hr
+                        .form-group
+                          .form-group-box.checkboxs#filterChannels
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |渠道1
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |渠道2
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |渠道3
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |渠道4
+                    .dropdown-menu-right.form-horizontal.clearfix(style="width:33%").pull-left
+                      .form-group
+                          label.col-md-2.control-label.pt9  服务器
+                          .col-md-7.pl0
+                            input(type="text",placeholder="搜索服务器").form-control
+                        .form-group
+                          .form-group-box.clearfix
+                            .checkbox.pull-left
+                              label
+                                input(type="checkbox",title="选中/取消选中").checkAll
+                                |全选
+                            .checkbox.pull-left.ml15
+                              label
+                                input(type="checkbox",title="反选").checkInverse
+                                |反选
+                            hr.filter-hr
+                        .form-group
+                          .form-group-box.checkboxs#filterServers
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |服务器1
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |服务器2
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |服务器3
+                            .checkbox
+                              label
+                                input(type="checkbox")
+                                |服务器4
+                    .dropdown-menu-foot.pull-right.mt15
+                      button(type="submit").btn.btn-success#filterApplyBtn 应用
+                      button.btn.btn-default#filterCloseBtn 取消
+            .btn-group.ml5
+              button.btn.btn-default.toolbar-btn#filterResultPlatforms 平台：
+                  span 全部
+              button.btn.btn-default.toolbar-btn#filteResultChannels 渠道：
+                  span 全部
+              button.btn.btn-default.toolbar-btn#filterResultServers 服务器：
+                  span 全部
+            .btn-group.pull-right
+              button.btn.btn-custome-lightblue.navbar-btn-date.toolbar-btn
+                i.fa.fa-calendar.mr5.icon-large
+                span 2014-04-16 - 2014-05-15
+              button.btn.btn-custome-lightblue.dropdown-toggle.navbar-btn-date.toolbar-btn.btn-calendar
+                b.caret
+
+
+    include templates/sidebar-report
+    .mainbar
+      include templates/report  

@@ -1,0 +1,15 @@
+extends templates/base
+block vars
+  - page = "admin"
+  - BASEURL = "../"
+block content
+  .content
+    // Subnav
+    .subnav
+      .container
+        .row 
+          .col-md-12
+            h4 管理中心
+    include templates/sidebar-admin
+    .mainbar
+      block mainbar

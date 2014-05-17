@@ -1,0 +1,56 @@
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-6
+        a(href="payment-channel-new.html").btn-custome.btn-custome-success 
+          i.fa.fa-plus
+          |添加渠道
+    .row
+      .col-md-12
+        .widget
+          .widget-head.clearfix
+            .pull-left
+              |分包渠道列表
+          .widget-content
+            table.table.table-bordered.table-custome
+              thead
+                tr 
+                  th 渠道名称
+                  th 渠道ID
+                  th 操作
+              tbody
+                tr 
+                  td unknown
+                  td 未知渠道  
+                  td (无法编辑和删除)
+                    
+                tr 
+                  td 360
+                  td 360市场 
+                  td 
+                    a(href="payment-channel-edit.html").btn.btn-primary.btn-sm 编辑
+                    button(data-toggle="modal",data-target="#deleteChannel").btn.btn-danger.btn-sm 删除
+                tr 
+                  td app_store  
+                  td AppStore 
+                  td 
+                    a(href="payment-channel-edit.html").btn.btn-primary.btn-sm 编辑
+                    button(data-toggle="modal",data-target="#deleteChannel").btn.btn-danger.btn-sm 删除
+                tr 
+                  td cmcc_sms
+                  td 移动短信支付 
+                  td 
+                    a(href="payment-channel-edit.html").btn.btn-primary.btn-sm 编辑
+                    button(data-toggle="modal",data-target="#deleteChannel").btn.btn-danger.btn-sm 删除
+            .widget-foot.clearfix
+              ul.pagination-custome.clearfix.pull-right
+                li
+                  a(href="#") 
+                    i.fa.fa-caret-left
+                li 1/5
+                li
+                  a(href="#") 
+                    i.fa.fa-caret-right
+
+// Matter end

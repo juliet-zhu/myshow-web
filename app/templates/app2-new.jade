@@ -1,0 +1,62 @@
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-12
+        .widget.new-app
+          .widget-head.clearfix
+            ul.step-bar.clearfix 
+              li.clearfix.step1.success 
+                i.fa.fa-check.pull-left.icon
+                .con.pull-left 
+                  h3 新建游戏
+                  span 创建需要分析的游戏
+                i.fa.fa-chevron-right.pull-right
+              li.clearfix.step2.active  
+                i.fa.fa-gear.pull-left.icon
+                .con.pull-left 
+                  h3 进行集成
+                  span 下载SDK包和集成指南
+                    br
+                    |使用获取的App ID进行集成
+                i.fa.fa-chevron-right.pull-right
+              li.clearfix.step3
+                .pull-right
+                  i.fa.fa-refresh.pull-left.icon
+                  .con.pull-left 
+                    h3 进行调试
+                    span 检查调用正确性
+                      br
+                      |成功向平台发送数据
+          .widget-content
+            .container
+              .row
+                .col-md-7
+                  .widget-content-left
+                    p demo 卡牌游戏
+                    .app-id.mt10
+                      |E03820166F61CAFC9648F34327FE1B3F
+                    .note.mt10
+                      |参阅
+                      a(href="#") &nbsp;在线集成指南&nbsp;
+                      |或SDK压缩包中随附的集成指南来完成集成：
+                      br
+                      |SDK版本：2.1.0 发布日期：2014-01-13
+                    .download-links.mt10
+                      - for (var i = 0;i < 4;i++)
+                          a(href="#") -下载 Android 和 IOS SDK
+                    //button.btn.btn-custome-success.mt10 完成
+                    a(href="app3-new.html").btn.btn-custome-success.mt10 完成
+                .col-md-5
+                  .widget-content-right
+                    .tips.mt20
+                      h5 贴士
+                      .con.clearfix
+                        p 
+                          i.fa.fa-caret-right
+                          | 认真选择游戏的类型，有利于后续查看数据报表时行业基准的准确性。
+                        p 
+                          i.fa.fa-caret-right
+                          | 跨手机平台的游戏只需建立一次，我们同时支持查看单一平台和聚合全平台的数据。
+
+// Matter end
