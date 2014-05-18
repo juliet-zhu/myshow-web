@@ -1,0 +1,22 @@
+// Sidebar 
+.sidebar.clearfix 
+  .sidebar-dropdown
+    a(href="#") 导航
+  // Sidebar navigation
+  ul#nav(style="display:block")
+    // Main menu with font awesome icon
+    li.has_sub 
+      a(href="#").open.subdrop
+        i.fa.fa-wrench
+        |商家管理
+        span.pull-right
+          i.fa.fa-caret-right
+      ul
+        li
+          a(href="merchant-publish.html") 
+            i.fa.fa-caret-right 
+            |发布内容
+          a(href="merchant-published.html") 
+            i.fa.fa-caret-right
+            |查看已发布内容
+// Sidebar ends

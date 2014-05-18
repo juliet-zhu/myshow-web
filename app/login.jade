@@ -1,0 +1,42 @@
+extends templates/base
+block vars
+  - page = "login"
+  - BASEURL = "../"
+block empty
+  .admin-form
+    .container
+      .row
+        .col-md-12
+          // Widget starts
+          .widget.worange
+            // Widget head
+            .widget-head
+              i.icon-lock
+              | 登录
+            .widget-content
+              .padd
+                // Login form
+                form.form-horizontal(role="form")#loginForm
+                  // 手机号
+                  .form-group
+                    label.control-label.col-lg-3(for='mobile') 手机号
+                    .col-lg-9
+                      input#mobile.form-control(type='text', placeholder='手机号',name="mobile")
+                  // Password
+                  .form-group
+                    label.control-label.col-lg-3(for='password') 密码
+                    .col-lg-9
+                      input#password.form-control(type='password', placeholder='密码',name="password")
+                  // Remember me checkbox and sign in button
+                  .form-group(style="height:auto;margin-bottom:10px")
+                    .col-lg-9.col-lg-offset-3
+                      .checkbox.pt0
+                        label
+                          input(type='checkbox')
+                          | 记住密码
+                  .col-lg-9.col-lg-offset-2
+                    button.btn.btn-success.full-width(type='submit') 登录
+                  br
+            .widget-foot(style="height:40px")
+
+

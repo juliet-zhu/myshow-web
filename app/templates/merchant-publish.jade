@@ -1,0 +1,84 @@
+// Page heading
+div.page-head
+  h2.pull-left
+    i.icon-file-alt
+    | 发布内容
+  // Breadcrumb
+  div.bread-crumb.pull-right
+    a(href='#')
+      i.icon-home
+      | 首页
+  div.clearfix
+// Page heading ends
+// Matter 
+.matter
+  .container
+    .row
+      .col-md-12
+        form#fileupload.well(enctype='multipart/form-data', method='POST')
+          // Redirect browsers with JavaScript disabled to the origin page
+          noscript
+            | &lt;input name="redirect" type="hidden" value="" /&gt;
+          // The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload
+          .row.fileupload-buttonbar
+            .col-lg-7
+              // The fileinput-button span is used to style the file input field as button
+              span.btn.btn-success.fileinput-button
+                i.glyphicon.glyphicon-plus
+                span 添加图片
+                input(multiple='', name='files', type='file')
+              button.btn.btn-primary.start(type='submit')
+                i.glyphicon.glyphicon-upload
+                span 开始上传
+              button.btn.btn-warning.cancel(type='reset')
+                i.glyphicon.glyphicon-ban-circle
+                span 取消上传
+              button.btn.btn-danger.delete(type='button')
+                i.glyphicon.glyphicon-trash
+                span Delete
+              input.toggle(type='checkbox')
+              // The global file processing state
+              span.fileupload-process
+            // The global progress state
+            .col-lg-5.fileupload-progress.fade
+              // The global progress bar
+              .progress.progress-striped.active(aria-valuemax='100', aria-valuemin='0', role='progressbar')
+                .progress-bar.progress-bar-success(style='width:0%;')
+              // The extended global progress state
+              .progress-extended  
+          // The table listing the files available for upload/download
+          table.table.table-striped(role='presentation')
+            tbody.files
+        form#publish-form.form-horizontal(action='/merchant/publish/add', method='post', role='form')
+          .form-group
+            label.col-sm-2.control-label(for='inputContent') 内容描述
+            .col-sm-10
+              textarea#inputContent.form-control(name='content', placeholder='内容描述', rows='3')
+          .form-group
+            label.col-sm-2.control-label(for='inputlabel') 选择标签
+            .col-sm-10
+              input#inputlabel.form-control(type='hidden')
+          div
+            label.col-sm-2
+              input(name='labels', type='checkbox', value='1')
+              span 暖男
+            label.col-sm-2
+              input(name='labels', type='checkbox', value='2')
+              span 女王范儿
+            label.col-sm-2
+              input(name='labels', type='checkbox', value='3')
+              span 伪大叔
+            label.col-sm-2
+              input(name='labels', type='checkbox', value='4')
+              span 性感惹火
+            label.col-sm-2
+              input(name='labels', type='checkbox', value='5')
+              span 千万不能点
+            label.col-sm-2
+              input(name='labels', type='checkbox', value='6')
+              span 蠢蠢欲动
+          .form-group
+            .col-sm-offset-1.col-sm-10
+              input#publish-submit.btn.btn-success(disabled='', type='submit', value='发布')
+// Matter ends
+

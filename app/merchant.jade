@@ -1,0 +1,15 @@
+extends templates/base
+block vars
+  - page = "merchant"
+  - BASEURL = "../"
+block content
+  .content
+    // Subnav
+    .subnav
+      .container
+        .row 
+          .col-md-12
+            h4 商家管理系统
+    include templates/sidebar-merchant
+    .mainbar
+      block mainbar
